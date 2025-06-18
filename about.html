@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | FoodieZest</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+ <!-- Navbar -->
+    <nav data-aos="fade-down">
+    
+        <div class="logo">FoodieZest</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="#" class="reservation-btn">Reserve</a></li>
+        </ul>
+    </nav>
+<!-- Header -->
+<header class="about-header" data-aos="fade-in">
+  <div class="overlay"></div>
+  <div class="header-content">
+    <h1>About FoodieZest 🍴</h1>
+    <p>Savor the Flavor, Love Every Bite</p>
+  </div>
+</header>
+
+<!-- Our Story -->
+<section class="about-section" data-aos="fade-up">
+  <div class="about-text">
+    <h2>Our Story</h2>
+    <p>Founded in 2020, FoodieZest was born from a passion for flavorful food and soulful dining. Our chefs blend tradition with innovation, serving up unforgettable meals with a twist of love and spice.</p>
+  </div>
+  <div class="about-image">
+    <img src="images/kichen.jpg" alt="Kitchen">
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="mission-section" data-aos="fade-up">
+  <h2>Our Mission</h2>
+  <p>To deliver joy through delicious, wholesome meals crafted with the freshest ingredients and a sprinkle of creativity.</p>
+</section>
+<!-- Slider Section -->
+    <section class="container">
+        <div class="slider-wraper">
+            <div class = "slider">
+                <img id="slide-1" src="images/hotel 2.jpg" alt="hotel 1"/>
+                <img id="slide-2" src="images/hotel 3.jpg" alt="hotel 1"/>
+                <img id="slide-3" src="images/hotel.jpg" alt="hotel 1"/>
+
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-1"></a>
+                <a href="#slide-1"></a>
+            </div>
+        </div>
+    </section>
+
+<!-- Values -->
+<section class="values-section" data-aos="fade-up">
+  <h2>What We Believe</h2>
+  <ul class="values">
+    <li>🌿 Freshness First</li>
+    <li>❤ Cook with Love</li>
+    <li>👨‍🍳 Culinary Creativity</li>
+    <li>🌍 Sustainability Matters</li>
+  </ul>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer" data-aos="fade-up">
+  <p>© 2025 FoodieZest. Crafted with ❤ for Food Lovers.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 1500, once: true });</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
+  
+    <script src="first.js"></script>
+</body>
+</html>

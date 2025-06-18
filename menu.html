@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">FoodieBite</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="#" class="reservation-btn">Reserve</a></li>
+        </ul>
+    </nav>
+
+    <!-- Filter Buttons -->
+    <div class="container">
+        <h1>🥄Food Menu</h1>
+        <div class="filter-buttons">
+            <button onclick="filterMenu('all')" class="active">All</button>
+            <button onclick="filterMenu('starters')">Starters</button>
+            <button onclick="filterMenu('main-course')">Main Course</button>
+            <button onclick="filterMenu('desserts')">Desserts</button>
+        </div>
+
+        <!-- Starters -->
+        <h2>Starters 🍔</h2>
+        <div class="gallery">
+            <div class="food-item" data-category="starters">
+                <img src="images/samosa.jpg" alt="Samosa" />
+                <p>Samosa</p>
+                <p>₹30</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="starters">
+                <img src="images/s r.jpg" alt="Spring Rolls" />
+                <p>Spring Rolls</p>
+                <p>₹60</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="starters">
+                <img src="images/greed.jpg" alt="Garlic Bread" />
+                <p>Garlic Bread</p>
+                <p>₹50</p>
+                <button>Order Now</button>
+            </div>
+        </div>
+
+        <!-- Main Course -->
+        <h2>Main Course</h2>
+        <div class="gallery">
+            <div class="food-item" data-category="main-course">
+                <img src="images/butter paneer.jpg" alt="Paneer Butter Masala" />
+                <p>Paneer Butter Masala</p>
+                <p>₹180</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="main-course">
+                <img src="images/veg biryani.jpg" alt="Veg Biryani" />
+                <p>Veg Biryani</p>
+                <p>₹120</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="main-course">
+                <img src="images/chicken.jpg" alt="Chicken Curry" />
+                <p>Chicken Curry</p>
+                <p>₹220</p>
+                <button>Order Now</button>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <h2>Desserts</h2>
+        <div class="gallery">
+            <div class="food-item" data-category="desserts">
+                <img src="images/cake.jpg" alt="Chocolate Cake" />
+                <p>Chocolate Cake</p>
+                <p>₹100</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="desserts">
+                <img src="images/ice cream.jpg" alt="Ice Cream" />
+                <p>Ice Cream</p>
+                <p>₹80</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="desserts">
+                <img src="images/gulaab jamun.jpg" alt="Gulab Jamun" />
+                <p>Gulab Jamun</p>
+                <p>₹150</p>
+                <button>Order Now</button>
+            </div>
+        </div>
+      <script src="first.js"></script>
+</body>
+<html>

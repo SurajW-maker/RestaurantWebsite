@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FoodieZest Profile Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- In <head> -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav data-aos="fade-down">
+    
+        <div class="logo">FoodieZest</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="#" class="reservation-btn">Reserve</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+<header class="about-header" data-aos="fade-in">
+  <div class="overlay"></div>
+  <div class="header-content">
+    <h1> FoodieZest 🍴</h1>
+    <p>Savor the Flavor, Love Every Bite</p>
+  </div>
+</header>
+
+    <!-- Slider Section -->
+    <div class="wrapper" data-aos="fade-up">
+        <div class="slider-container">
+            <h2 class="slider-title" data-aos="zoom-in">🍽 Our Delicious Dishes</h2>
+            <div class="slider" data-aos="zoom-in-up">
+                <div class="slides">
+                    <img src="images/pizza.jpg" alt="Food 1" class="slide active" />
+                    <img src="images/veg momos.jpg" alt="Food 2" class="slide" />
+                    <img src="images/samosa.jpg" alt="Food 3" class="slide" />
+                    <img src="images/s r.jpg" alt="Food 4" class="slide" />
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dish of the Day Section -->
+    <section class="dish-of-the-day" data-aos="fade-up">
+        <h2 data-aos="fade-right">🍽 Dish of the Day</h2>
+        <div class="dish-highlight" data-aos="zoom-in">
+            <img src="C:\Users\suraj\Downloads\web devlopment\images\butter paneer.jpg" alt="Paneer Butter Masala" />
+            <div class="dish-info" data-aos="fade-left">
+                <h3>Paneer Butter Masala</h3>
+                <p>A creamy, rich, and flavorful dish with a perfect blend of spices.</p>
+                <p>₹150</p>
+                <button>Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <div class="container" data-aos="fade-up">
+        <h1 data-aos="fade-right">🥄 My Favorite Food Menu</h1>
+        <div class="filter-buttons" data-aos="zoom-in">
+            <button onclick="filterMenu('all')" class="active">All</button>
+            <button onclick="filterMenu('starters')">Starters</button>
+            <button onclick="filterMenu('main-course')">Main Course</button>
+            <button onclick="filterMenu('desserts')">Desserts</button>
+        </div>
+
+        <!-- Starters -->
+         
+        <h2  data-aos="fade-left">Starters 🍔</h2>
+        <div class="gallery" data-aos="zoom-in-up">
+            <div class="food-item" data-category="starters">
+                <img src="images/samosa.jpg" alt="Samosa" />
+                <p>Samosa</p>
+                <p>₹30</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="starters" >
+                <img src="images/s r.jpg" alt="Spring Rolls" />
+                <p>Spring Rolls</p>
+                <p>₹60</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="starters">
+                <img src="images/greed.jpg" alt="Garlic Bread" />
+                <p>Garlic Bread</p>
+                <p>₹50</p>
+                <button>Order Now</button>
+            </div>
+            </section>
+        
+
+        <!-- <div class="gallery"> -->
+            <div class="food-item" data-category="starters">
+                <img src="images/kanda bahje.jpg" alt="Samosa" />
+                <p>kanda bhaji</p>
+                <p>₹50</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="starters">
+                <img src="images/veg momos.jpg" alt="Samosa" />
+                <p>veg momos</p>
+                <p>₹70</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="starters">
+                <img src="images/garlic-panner.jpg" alt="Samosa" />
+                <p>Garlic Paneer</p>
+                <p>₹80</p>
+                <button>Order Now</button>
+            </div>
+            </div>
+
+        <!-- Main Course -->
+        <h2 data-aos="fade-left">Main Course</h2>
+        <div class="gallery"  data-aos="zoom-in-up">
+            <div class="food-item" data-category="main-course">
+                <img src="images/butter paneer.jpg" alt="Paneer Butter Masala" />
+                <p>Paneer Butter Masala</p>
+                <p>₹220</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="main-course">
+                <img src="images/veg biryani.jpg" alt="Veg Biryani" />
+                <p>Veg Biryani</p>
+                 <p>₹260</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="main-course">
+                <img src="images/chicken.jpg" alt="Chicken Curry" />
+                <p>Chicken Curry</p>
+                 <p>₹200</p>
+                <button>Order Now</button>
+            </div>
+        </div>
+
+        <!-- Desserts -->
+        <h2 data-aos="fade-left">Desserts</h2>
+        <div class="gallery" data-aos="zoom-in-up">
+            <div class="food-item" data-category="desserts">
+                <img src="images/cake.jpg" alt="Chocolate Cake" />
+                <p>Chocolate Cake</p>
+                 <p>₹150</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="desserts">
+                <img src="images/ice cream.jpg" alt="Ice Cream" />
+                <p>Ice Cream</p>
+                 <p>₹100</p>
+                <button>Order Now</button>
+            </div>
+            <div class="food-item" data-category="desserts">
+                <img src="images/gulaab jamun.jpg" alt="Gulab Jamun" />
+                <p>Gulab Jamun</p>
+                 <p>₹80</p>
+                <button>Order Now</button>
+            </div>
+        </div>
+ 
+<!-- Lightbox & AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
+
+<section class="restaurant-gallery">
+  <h2 class="gallery-title" data-aos="fade-up">Our Restaurant Moments 🏠</h2>
+  <div class="gallery-grid">
+    <a href="images/restaurant1.jpg" data-lightbox="restaurant" data-aos="zoom-in">
+      <img src="images/restaurant1.jpg" alt="Restaurant View 1">
+    </a>
+    <a href="images/restaurant2.jpg" data-lightbox="restaurant" data-aos="zoom-in" data-aos-delay="100">
+      <img src="images/restaurant2.jpg" alt="Restaurant View 2">
+    </a>
+    <a href="images/restaurant3.jpg" data-lightbox="restaurant" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/restaurant3.jpg" alt="Restaurant View 3">
+    </a>
+    <a href="images/restaurant4.jpg" data-lightbox="restaurant" data-aos="zoom-in" data-aos-delay="300">
+      <img src="images/restaurant4.jpg" alt="Restaurant View 4">
+    </a>
+    <a href="images/restaurant5.jpg" data-lightbox="restaurant" data-aos="zoom-in" data-aos-delay="400">
+      <img src="images/restaurant5.jpg" alt="Restaurant View 5">
+    </a>
+    <a href="images/restaurant6.jpg" data-lightbox="restaurant" data-aos="zoom-in" data-aos-delay="500">
+      <img src="images/restaurant6.jpg" alt="Restaurant View 6">
+    </a>
+  </div>
+</section>
+
+<!-- Lightbox & AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+        <!--Review section-->
+    
+        <section class="reviews-section" data-aos="fade-up">
+  <h2 data-aos="fade-up">What Our Customers Say</h2>
+  <div class="reviews-slider-container" data-aos="fade-up" data-aos-delay="100">
+    <button class="review-prev">&#10094;</button>
+    <div class="reviews-slider">
+      <div class="review-card" data-aos="fade-right" data-aos-delay="200">
+        <div class="reviewer-photo">
+          <img src="images/81.jpg" alt="Sam" />
+        </div>
+        <div class="review-content">
+          <h3>Samantha</h3>
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>Amazing food and fantastic service! The Paneer Butter Masala was delicious and the ambiance made the meal even better.</p>
+        </div>
+      </div>
+      <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="reviewer-photo">
+          <img src="images/65.jpg" alt="kate" />
+        </div>
+        <div class="review-content">
+          <h3>Kate Wislet</h3>
+          <p>⭐⭐⭐⭐</p>
+          <p>Great variety of dishes and quick delivery. Loved the desserts, especially the chocolate cake.</p>
+        </div>
+      </div>
+      
+      <div class="review-card" data-aos="fade-left" data-aos-delay="400">
+        <div class="reviewer-photo">
+          <img src="images/82.jpg" alt="Alex Johnson" />
+        </div>
+        <div class="review-content">
+          <h3>Amber Heard</h3>
+          <p>⭐⭐⭐⭐⭐</p>
+          <p>Friendly staff and excellent flavors! Highly recommend the Veg Biryani.</p>
+        </div>
+      </div>
+    </div>
+    <button class="review-next">&#10095;</button>
+  </div>
+  <div class="review-dots" data-aos="zoom-in">
+    <span class="review-dot active"></span>
+    <span class="review-dot"></span>
+    <span class="review-dot"></span>
+  </div>
+</section>
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chef Section</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body> -->
+
+  <section class="chef-section" data-aos="fade-up">
+    <h2 class="section-title" data-aos="fade-down">Meet Our Master Chefs 👨‍🍳</h2>
+
+    <div class="chef-wrapper">
+      <!-- Chef Card 1 -->
+      <div class="chef-card" data-aos="fade-right" data-aos-delay="100">
+        <div class="chef-img">
+          <img src="images/chef 3.jpg" alt="Chef Armaan">
+          <div class="overlay">
+            <p>Specializes in Mughlai & Tandoori Dishes. 15+ years of experience.</p>
+          </div>
+        </div>
+        <h3>Chef Armaan Khan</h3>
+        <p>Indian Cuisine Expert Specializes in Mughlai & Tandoori Dishes. 15+ years of experience.</p>
+        <div class="chef-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Chef Card 2 -->
+      <div class="chef-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="chef-img">
+          <img src="images/chef 1.jpg" alt="Chef Neha">
+          <div class="overlay">
+            <p>Pastry artist known for artisan cakes and fusion desserts.</p>
+          </div>
+        </div>
+        <h3>Chef Harika Agrawal</h3>
+        <p>Pastry artist known for artisan cakes and fusion desserts.</p>
+        <div class="chef-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Chef Card 3 -->
+      <div class="chef-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="chef-img">
+          <img src="images/chef 4.jpg" alt="Chef Neha">
+          <div class="overlay">
+            <p>Pastry artist known for artisan cakes and fusion desserts.</p>
+          </div>
+        </div>
+        <h3>Chef Neha Kulkarni</h3>
+        <p>Dessert & Bakery Specialist</p>
+        <div class="chef-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Chef Card 3 -->
+      <div class="chef-card" data-aos="fade-left" data-aos-delay="400">
+        <div class="chef-img">
+          <img src="images/chef 2.jpg" alt="Chef Rahul">
+          <div class="overlay">
+            <p>Revolutionizing Indian street food with healthy & modern twists.</p>
+          </div>
+        </div>
+        <h3>Chef Rahul Mehta</h3>
+        <p>Street Food Innovator Revolutionizing Indian street food with healthy & modern twists.</p>
+        <div class="chef-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="booking-section" id="book" data-aos="fade-up">
+  <h2 class="section-title">Reserve Your Table 🍽</h2>
+  <p class="section-subtitle">We recommend booking in advance to avoid waiting!</p>
+
+  <div class="booking-form">
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="tel" placeholder="Phone Number" required />
+      
+      <div class="form-row">
+        <input type="date" required />
+        <input type="time" required />
+      </div>
+
+      <select required>
+        <option value="">Select Number of Guests</option>
+        <option>1 Guest</option>
+        <option>2 Guests</option>
+        <option>3 Guests</option>
+        <option>4 Guests</option>
+        <option>5+ Guests</option>
+      </select>
+
+      <textarea placeholder="Any Special Request? (Optional)" rows="4"></textarea>
+      
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+</section>
+
+<!-- 📍 Google Map -->
+<!-- <section class="map-section">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.3566611438896!2d72.8358458149032!3d19.136897487057713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c92cd52b50df%3A0xe2be07e5caa2a170!2sMumbai!5e0!3m2!1sen!2sin!4v1613902305999!5m2!1sen!2sin"
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+</section> -->
+
+<!-- 📇 Contact Info Cards -->
+<section class="contact-section" data-aos="fade-up">
+  <h2 class="section-title">Contact Us 📞</h2>
+
+  <div class="contact-cards">
+    <div class="contact-card">
+      <h3>📍 Address</h3>
+      <p>123 Tasty Street,<br>Mumbai, India</p>
+    </div>
+    <div class="contact-card">
+      <h3>📞 Call Us</h3>
+      <p>+91 98765 43210</p>
+    </div>
+    <div class="contact-card">
+      <h3>✉ Email</h3>
+      <p>info@foodiezest.com</p>
+    </div>
+    <div class="contact-card">
+      <h3>🕒 Opening Hours</h3>
+      <p>Mon - Sun: 10am - 11pm</p>
+    </div>
+  </div>
+
+  <!-- 📨 Contact Form -->
+  <div class="contact-form-container">
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- 📍 Google Map -->
+<section class="map-section">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.3566611438896!2d72.8358458149032!3d19.136897487057713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c92cd52b50df%3A0xe2be07e5caa2a170!2sMumbai!5e0!3m2!1sen!2sin!4v1613902305999!5m2!1sen!2sin"
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+</section>
+
+
+<footer class="site-footer" data-aos="fade-up">
+  <div class="footer-container">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <h2>FoodieZest 🍴</h2>
+      <p>Savor the Flavor, Love Every Bite.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#book">Book Table</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
+        <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
+        <a href="#"><img src="icons/twitter.svg" alt="Twitter" /></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2025 FoodieZest. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Before closing </body> -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 2000, once: true });
+</script>
+
+ 
+</body>
+</html>
+  
+    <script src="first.js"></script>
+</body>
+</html>
